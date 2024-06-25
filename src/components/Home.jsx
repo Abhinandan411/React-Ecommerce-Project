@@ -3,6 +3,8 @@ import Header from './Header'
 import Hero from './Hero'
 import About from './About'
 import Product from './Product'
+import SingleProduct from './SingleProduct'
+import ProductOutlet from './ProductOutlet'
 import Cart from './Cart'
 import SignUp from './SignUp'
 import Login from './Login'
@@ -52,7 +54,12 @@ function Home() {
                     <Routes>
                         <Route path='/' element={<Hero />}></Route>
                         <Route path='/about' element={<About />}></Route>
-                        <Route path='/products' element={<Product />}></Route>
+
+                        <Route path='/products' element={<ProductOutlet />}>
+                          <Route index element={<Product/>}></Route>
+                          <Route path=":id" element={<SingleProduct/>} ></Route>
+                        </Route>
+
                         <Route path='/cart' element={<Cart />}></Route>
                         <Route path='/signup' element={<SignUp />}></Route>
                         <Route path='/login' element={<Login />}></Route>

@@ -8,6 +8,7 @@ import ProductOutlet from './ProductOutlet'
 import Cart from './Cart'
 import SignUp from './SignUp'
 import Login from './Login'
+import UserAccount from './UserAccount'
 import { BrowserRouter, Route, Routes, useSearchParams } from 'react-router-dom'
 
 
@@ -63,6 +64,7 @@ function Home() {
                         <Route path='/cart' element={<Cart />}></Route>
                         <Route path='/signup' element={<SignUp />}></Route>
                         <Route path='/login' element={<Login />}></Route>
+                        <Route path='/useraccount' element={<UserAccount />}></Route>
                     </Routes>
                 </ecomContext.Provider>
 

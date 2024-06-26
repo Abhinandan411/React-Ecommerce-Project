@@ -26,8 +26,9 @@ function Header() {
                     <Link to="/cart">Cart</Link>
                 </ul>
                 <ul className='flex justify-between gap-4'>
-                    <li><DarkModeIcon/></li> 
-                    <li><ShoppingCartIcon/><span>{cart.length}</span></li> 
+                    <li><DarkModeIcon/></li>
+                    <Link to="/cart"><ShoppingCartIcon/><span>{cart.length}</span></Link>
+                    
                 </ul>
             </div>
        </header>
